@@ -43,6 +43,7 @@ p {
 	font-weight: bold;
 	text-transform: uppercase;
 	gap: var(--gutter-size);
+	backdrop-filter: blur(10px);
 }
 
 .nav-item {
@@ -59,6 +60,12 @@ p {
 header {
 	background-color: var(--color--background);
 	padding-block: calc(5 * var(--base-size));
+}
+
+img {
+	height: 33vh;
+	object-fit: cover;
+	overflow: hidden;
 }
 
 #main-content {
