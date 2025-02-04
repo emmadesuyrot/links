@@ -62,7 +62,7 @@ header {
 	padding-block: calc(5 * var(--base-size));
 }
 
-img {
+image-1 {
 	height: 33vh;
 	object-fit: cover;
 	overflow: hidden;
@@ -79,9 +79,8 @@ section {
 }
 
 footer {
-	background-color: var(--color--secondary);
 	padding-top: var(--base-size);
-	padding-bottom: calc(5 * var(--base-size));
+	padding-bottom: calc(4 * var(--base-size));
 }
 
 .gutters {
