@@ -20,7 +20,11 @@ h1 {
 }
 
 .nav {
-	display:flex;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	display: flex;
 	justify-content: space-between;
 	padding: var(--gutter-size);
 	font-size: calc(var(--base-size) * 0.875);
