@@ -29,6 +29,7 @@ h1 {
 h2 {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 1.1);
+	margin-bottom: 2rem;
 }
 
 .alt-font {
@@ -63,10 +64,11 @@ li {
 	height: 33vh;
 	max-height: 300px;
 	overflow: hidden;
+	border: 1px solid rgb(109, 0, 0);
 }
 
-.image-block {
-	width: 100%;
+.image-block img {
+	width: 343px;
 	height: 100%;
 	object-fit: cover;
 	mix-blend-mode: luminosity;
@@ -74,11 +76,17 @@ li {
 	z-index: 1;
 }
 
+.image-block p {
+	margin-top: 0.5rem;
+	font-size: calc(var(--base-size) * 0.875);
+}
+
 .text-block {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
+	width: 343px;
 }
 
 .text-block blockquote {
@@ -86,12 +94,14 @@ li {
 	font-size: calc(var(--base-size) * 0.8);
 	max-width: 100%;
 	margin: 0 auto;
+	width: 343px;
 }
 
 .video-block iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
+	width: 343px;
 }
 
 .nav {
@@ -160,10 +170,6 @@ h1 {
 	font-size: calc(var(--base-size) * 4);
 }
 
-li {
-	flex: 1 1 calc(50% - 1rem); /* 2 per row */
-}
-
 p {
 	font-size: calc(var(--base-size) * 1.25);
 	line-height: 1.6;
@@ -185,10 +191,6 @@ p {
 
 h1 {
 	font-size: calc(var(--base-size) * 5);
-}
-
-li {
-	flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
 }
 
 p {
