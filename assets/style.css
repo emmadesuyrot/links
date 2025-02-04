@@ -16,6 +16,10 @@ body {
 	color: var(--color--primary-red);
 	font-size: var(--base-size);
 	font-family: 'Lora', serif;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: 100%;
 }
 
 h1 {
@@ -56,6 +60,7 @@ p {
 	text-transform: uppercase;
 	gap: var(--gutter-size);
 	backdrop-filter: blur(10px);
+	z-index: 1;
 }
 
 .nav-item {
@@ -64,12 +69,6 @@ p {
 
 ul li {
 	margin-top: 20px;
-}
-
-ul {
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr;
 }
 
 @media (min-width: 600px) {
@@ -111,10 +110,6 @@ header {
 	block-size: 75vh;
 	padding-top: var(--base-size);
 	padding-bottom: var(2 * (--base-size));
-}
-
-ul {
-	grid-template-columns: repeat(2, 1fr);
 }
 
 section {
@@ -173,10 +168,6 @@ p {
 	padding-left: calc(var(--gutter-size) * 10);
 	padding-right: calc(var(--gutter-size) * 10);
 	font-size: calc(var(--base-size) * 1.2);
-}
-
-ul {
-	grid-template-columns: repeat(3, 1fr);
 }
 
 li {
