@@ -14,6 +14,26 @@ body {
 	font-size: var(--base-size);
 }
 
+h1 {
+	font-size: calc(var(--base-size) * 2.5);
+	line-height: 2;
+}
+
+.nav {
+	display:flex;
+	justify-content: space-between;
+	padding: var(--gutter-size);
+	font-size: calc(var(--base-size) * 0.875);
+	font-weight: bold;
+	text-transform: uppercase;
+	gap: var(--gutter-size);
+}
+
+.nav-item {
+	text-shadow: 0 0 10px var(--color--re-shadow);
+	padding: calc(var(--gutter-size) * 0.5);
+}
+
 @media (min-width: 600px) {
 	:root {
 		--gutter-size: calc(3 * var(--base-size));
@@ -24,19 +44,6 @@ body {
 header {
 	background-color: var(--color--background);
 	padding-block: calc(5 * var(--base-size));
-}
-
-.nav {
-	display:flex;
-	justify-content: space-between;
-	padding: var(--gutter-size);
-	font-size: calc(var(--base-size) * 0.875);
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.nav-item {
-	text-shadow: 0 0 10px var(--color--re-shadow);
 }
 
 #main-content {
