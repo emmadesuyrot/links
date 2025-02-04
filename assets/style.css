@@ -12,10 +12,12 @@ body {
 	text-align: center;
 	color: var(--color--primary-red);
 	font-size: var(--base-size);
+	font-family: 'Lora', serif;
 }
 
 h1 {
-	font-size: calc(var(--base-size) * 2.5);
+	font-family: 'Pinyon Script', cursive;
+	font-size: calc(var(--base-size) * 3.2);
 	line-height: 2;
 }
 
