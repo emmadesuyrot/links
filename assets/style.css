@@ -22,13 +22,19 @@ h1 {
 	font-family: var(--font-heading);
 	font-size: calc(var(--base-size) * 3.2);
 	line-height: 2;
+	color: white;
 	text-shadow: 0 0 5px var(--color--re-shadow);
+}
+
+h2 {
+	font-family: var(--font-body);
+	font-size: calc(var(--base-size) * 1.1);
+	text-transform: uppercase;
 }
 
 p {
 	font-family: var(--font-body);
-	font-size: var(--fon);
-	font-weight: 400;
+	font-size: calc(var(--base-size) * 0.875);
 }
 
 .nav {
@@ -50,6 +56,10 @@ p {
 	padding: calc(var(--gutter-size) * 0.5);
 }
 
+ul li {
+	margin-top: 20px;
+}
+
 @media (min-width: 600px) {
 	:root {
 		--gutter-size: calc(3 * var(--base-size));
@@ -59,14 +69,28 @@ p {
 
 header {
 	background-color: var(--color--background);
-	padding-block: calc(5 * var(--base-size));
+	padding-block-start: calc(6 * var(--base-size));
+	padding-block-end: calc(4 * var(--base-size));
 }
 
-image-1 {
+.image-1 {
 	height: 33vh;
 	object-fit: cover;
 	overflow: hidden;
+	mix-blend-mode: luminosity;
+	aspect-ratio: 1/1;
+	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
+
+.image-1:hover {
+	/*heart mask from code pen (https://codepen.io/t_afif/pen/PoRwjPM)*/
+	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+	-webkit-mask-box-image: var(--_m);
+	mask-border: var(--_m);
+	clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+
 
 #main-content {
 	block-size: 75vh;
