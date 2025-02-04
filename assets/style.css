@@ -1,42 +1,60 @@
 body {
 	--base-size: 16px;
 	--gutter-size: calc(var(--base-size));
-   
+
 	--color--primary: black;
 	--color--secondary: gold;
-	--color--background: tomato;
-   
-	font-size: var(--base-size)
-   }
-   
-   @media (min-width: 600px) {
-	   :root {
-		   --gutter-size: calc(3 * var(--base-size));
-		   --base-size: 20px;
-	   }
-   }
-   
-   header {
-	   background-color: var(--color--background);
-	   padding-block: calc(5 * var(--base-size));
-   }
-   
-   #main-content {
-	   block-size: 75vh;
-	   padding-top: var(--base-size);
-	   padding-bottom: var(2 * (--base-size));
-   }
-   
-   section {
-	   block-size: 75vh;
-   }
-   
-   footer {
-	   background-color: var(--color--secondary);
-	   padding-top: var(--base-size);
-	   padding-bottom: calc(5 * var(--base-size));
-   }
-   
-   .gutters {
-	   padding-inline: var(--gutter-size);
-   }
+	--color--background: #4a0000;
+	--color--primary-red: #ff0101;
+	--color--re-shadow: #ff0101bb;
+	
+	background-color: (--color--background);
+	text-align: center;
+	color: var(--color--primary-red);
+	font-size: var(--base-size);
+}
+
+@media (min-width: 600px) {
+	:root {
+		--gutter-size: calc(3 * var(--base-size));
+		--base-size: 20px;
+	}
+}
+
+header {
+	background-color: var(--color--background);
+	padding-block: calc(5 * var(--base-size));
+}
+
+.nav {
+	display:flex;
+	justify-content: space-between;
+	padding: var(--gutter-size);
+	font-size: calc(var(--base-size) * 0.875);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.nav-item {
+	text-shadow: 0 0 10px var(--color--re-shadow);
+}
+
+#main-content {
+	block-size: 75vh;
+	padding-top: var(--base-size);
+	padding-bottom: var(2 * (--base-size));
+}
+
+section {
+	block-size: 75vh;
+}
+
+footer {
+	background-color: var(--color--secondary);
+	padding-top: var(--base-size);
+	padding-bottom: calc(5 * var(--base-size));
+}
+
+.gutters {
+	padding-inline: var(--gutter-size);
+}
