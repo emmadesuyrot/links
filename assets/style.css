@@ -7,8 +7,11 @@ body {
 	--color--background: #4a0000;
 	--color--primary-red: #ff0101;
 	--color--re-shadow: #ff0101bb;
+
+	--font-body: 'Lora', serif;
+	--font-heading: 'Pinyon Script', cursive;
 	
-	background-color: (--color--background);
+	background-color: var(--color--background);
 	text-align: center;
 	color: var(--color--primary-red);
 	font-size: var(--base-size);
@@ -16,9 +19,16 @@ body {
 }
 
 h1 {
-	font-family: 'Pinyon Script', cursive;
+	font-family: var(--font-heading);
 	font-size: calc(var(--base-size) * 3.2);
 	line-height: 2;
+	text-shadow: 0 0 5px var(--color--re-shadow);
+}
+
+p {
+	font-family: var(--font-body);
+	font-size: var(--fon);
+	font-weight: 400;
 }
 
 .nav {
@@ -36,7 +46,6 @@ h1 {
 }
 
 .nav-item {
-	text-shadow: 0 0 10px var(--color--re-shadow);
 	padding: calc(var(--gutter-size) * 0.5);
 }
 
