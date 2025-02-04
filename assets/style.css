@@ -96,6 +96,7 @@ header {
 	mix-blend-mode: luminosity;
 	aspect-ratio: 1/1;
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
+	z-index: 1;
 }
 
 .image-1:hover {
