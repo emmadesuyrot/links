@@ -90,8 +90,6 @@ header {
 	clip-path: polygon(-41% 0,50% 91%, 141% 0);
 }
 
-
-
 #main-content {
 	block-size: 75vh;
 	padding-top: var(--base-size);
@@ -109,4 +107,12 @@ footer {
 
 .gutters {
 	padding-inline: var(--gutter-size);
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1280px) {
+
 }
