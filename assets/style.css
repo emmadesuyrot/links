@@ -30,6 +30,7 @@ h2 {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 1.1);
 	margin-bottom: 2rem;
+	color: white;
 }
 
 .alt-font {
@@ -99,6 +100,11 @@ li {
 	max-width: 100%;
 	margin: 0 auto;
 	width: 343px;
+	color: white;
+}
+
+cite {
+	margin-top: 1rem;
 }
 
 .video-block iframe {
@@ -117,8 +123,6 @@ li {
 	display: flex;
 	justify-content: space-between;
 	padding: var(--gutter-size);
-	font-size: calc(var(--base-size) * 0.875);
-	font-weight: bold;
 	text-transform: uppercase;
 	gap: var(--gutter-size);
 	backdrop-filter: blur(10px);
@@ -127,6 +131,8 @@ li {
 
 .nav-item {
 	padding: calc(var(--gutter-size) * 0.5);
+	font-size: calc(var(--base-size) * 0.875);
+	font-weight: bold;
 }
 
 @media (min-width: 600px) {
