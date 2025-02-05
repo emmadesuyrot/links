@@ -153,13 +153,13 @@ header {
 }
 
 #main-content {
-	block-size: 75vh;
+	min-block-size: 75vh;
 	padding-top: var(--base-size);
 	padding-bottom: var(2 * (--base-size));
 }
 
 section {
-	block-size: 75vh;
+	min-block-size: 75vh;
 }
 
 footer {
