@@ -33,11 +33,6 @@ h2 {
 	color: white;
 }
 
-.alt-font {
-	font-family: var(--font-heading);
-	font-size: calc(var(--base-size) * 1.3);
-}
-
 p {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 0.875);
