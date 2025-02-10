@@ -32,7 +32,7 @@ let renderBlock = (block) => {
 			<li>
 				<p><em>Link</em></p>
 				<picture>
-					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
+					<source media="(max-width: 428px)" srcset="${ block.image.original.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
@@ -123,10 +123,6 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li>
-					<p><em>Linked Video</em></p>
-					${ block.embed.html }
-				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
