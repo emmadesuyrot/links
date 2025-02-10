@@ -16,7 +16,7 @@ let placeChannelInfo = (data) => {
 	// Then set their content/attributes to our data:
 	channelTitle.innerHTML = data.title
 	channelDescription.innerHTML = window.markdownit().render(data.metadata.description) // Converts Markdown → HTML
-	channelCount.innerHTML = data.length
+	// channelCount.innerHTML = data.length
 	channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
 
@@ -36,9 +36,7 @@ let renderBlock = (block) => {
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
-				<h3>${ block.title }</h3>
-				${ block.description_html }
-				<p><a href="${ block.source.url }">See the original ↗</a></p>
+				<h3 class="block-title">${block.title}</h3>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -46,7 +44,15 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
+		console.log("block", block)
 		// …up to you!
+		let imageItem = `
+			<li class="image-block">
+				<img class="image1" src="${block.image.original.url}">
+				<h3 class="block-title">${block.title}</h3>
+			</li>
+		`
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem);
 	}
 
 	// Text!
@@ -55,12 +61,11 @@ let renderBlock = (block) => {
 		console.log(block.content_html)
 		let textItem = `
 			<li class="text-block">
-				<blockquote>&ldquo;Though still in bed, my thoughts go out to you, my Immortal Beloved, Be calm–love me–today–yesterday–what tearful longings for you–you–you–my life–my all–farewell. Oh continue to love me–never misjudge the most faithful heart of your beloved. Ever thine. Ever mine. Ever ours.&rdquo;</blockquote>
-				<cite>Ludwig van Beethoven's Immortal Beloved</cite>
+				<blockquote>${block.content}</blockquote>
+				<h3 class="block-title">${block.title}</h3>
 			</li>
 		`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
-
 	}
 
 	// Uploaded (not linked) media…
@@ -70,11 +75,11 @@ let renderBlock = (block) => {
 		// Uploaded videos!
 		if (attachment.includes('video')) {
 			// …still up to you, but we’ll give you the `video` element:
-			let videoItem =
+			let videoItem = 
 				`
 				<li>
-					<p><em>Video</em></p>
-					<video controls src="${ block.attachment.url }"></video>
+					<video controls autoplay src="${block.attachment.url}"></video>
+					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
@@ -85,6 +90,13 @@ let renderBlock = (block) => {
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
 			// …up to you!
+			let pdfItem = `
+				<li class="pdf-block">
+					<img src="${ block.contents.image.original.url }">
+					<h3 class="block-title">${block.title}</h3>
+				</li>
+			`
+			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 		}
 
 		// Uploaded audio!
@@ -93,8 +105,8 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li>
-					<p><em>Audio</em></p>
-					<audio controls src="${ block.attachment.url }"></video>
+					<audio controls src="${ block.attachment.url }"></audio>
+					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
