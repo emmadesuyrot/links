@@ -53,7 +53,8 @@ ul {
 
 li {
 	flex-grow: 1;
-	max-height: 300px;
+	height: 300px;
+	width: 300px;
 	overflow: hidden;
 	flex: 0 0 auto;
 	display: flex;
@@ -63,7 +64,6 @@ li {
 	align-items: center;
 	text-align: center;
 	aspect-ratio: 1 / 1;
-	height: 33vh;
 	overflow: hidden;
 }
 
@@ -77,9 +77,11 @@ li {
 	border: 1px solid rgb(109, 0, 0);
 }
 
-.image-block p {
-	margin-top: 0.5rem;
-	font-size: calc(var(--base-size) * 0.875);
+img {
+	width: 300px;
+	height: 100%;
+	flex-grow: 1;
+	object-fit: cover;
 }
 
 .text-block blockquote {

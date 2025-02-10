@@ -30,12 +30,7 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<p><em>Link</em></p>
-				<picture>
-					<source media="(max-width: 428px)" srcset="${ block.image.original.url }">
-					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
-					<img src="${ block.image.original.url }">
-				</picture>
+				<img src="${ block.image.original.url }">
 				<h3 class="block-title">${block.title}</h3>
 			</li>
 			`
@@ -48,7 +43,7 @@ let renderBlock = (block) => {
 		// …up to you!
 		let imageItem = `
 			<li class="image-block">
-				<img class="image1" src="${block.image.original.url}">
+				<img class="image" src="${block.image.original.url}">
 				<h3 class="block-title">${block.title}</h3>
 			</li>
 		`
