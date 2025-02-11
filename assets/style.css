@@ -33,6 +33,10 @@ h2 {
 	color: white;
 }
 
+h3 {
+	padding-top: calc(var(--gutter-size) * 0.5);
+}
+
 p {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 0.875);
@@ -69,7 +73,7 @@ li {
 
 .image-block img {
 	width: 300px;
-	height: 300px;
+	height: 100%;
 	object-fit: cover;
 	mix-blend-mode: luminosity;
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
@@ -93,13 +97,21 @@ img {
 	text-align: center;
 	overflow: hidden;
 	border: 1px solid rgb(109, 0, 0);
+	box-shadow: inset 0px 0px 30px rgb(43, 1, 1);
 }
+
+blockquote {
+	font-size: calc(var(--base-size) * 0.875);
+	padding: calc(var(--gutter-size)* 2);
+	color: rgb(131, 74, 74);
+}
+
 
 cite {
 	margin-top: 1rem;
 }
 
-.video-block {
+.video-block .linked-video-block {
 	width: 300px;
 	height: 300px;
 	display: flex;

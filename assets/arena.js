@@ -30,7 +30,7 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<img src="${ block.image.original.url }">
+				<img src="${ block.image.original.url }"></img>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
 			`
@@ -39,11 +39,12 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
-		console.log("block", block)
+		// console.log("block", block)
 		// …up to you!
-		let imageItem = `
+		let imageItem = 
+		`
 			<li class="image-block">
-				<img class="image" src="${block.image.original.url}">
+				<img class="image" src="${block.image.original.url}"></img>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
 		`
@@ -53,8 +54,9 @@ let renderBlock = (block) => {
 	// Text!
 	else if (block.class == 'Text') {
 		// …up to you!
-		console.log(block.content_html)
-		let textItem = `
+		// console.log(block.content_html)
+		let textItem = 
+		`
 			<li class="text-block">
 				<blockquote>${block.content}</blockquote>
 				<h3 class="block-title">${block.title}</h3>
@@ -70,10 +72,10 @@ let renderBlock = (block) => {
 		// Uploaded videos!
 		if (attachment.includes('video')) {
 			// …still up to you, but we’ll give you the `video` element:
-			let videoItem = 
+			let videoItem =
 				`
-				<li>
-					<video controls autoplay src="${block.attachment.url}"></video>
+				<li class="video-block">
+					<img src="${ block.image.thumb.url }">
 					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
@@ -87,7 +89,7 @@ let renderBlock = (block) => {
 			// …up to you!
 			let pdfItem = `
 				<li class="pdf-block">
-					<img src="${ block.contents.image.original.url }">
+					<img src="${ block.contents.image.original.url }"></img>
 					<h3 class="block-title">${block.title}</h3>
 				</li>
 			`
@@ -101,7 +103,7 @@ let renderBlock = (block) => {
 				`
 				<li>
 					<audio controls src="${ block.attachment.url }"></audio>
-					<h3 class="block-title">${block.title}</h3>
+					<h3 class="block-title">${block.generated_title}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -118,6 +120,10 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
+				<li class="linked-video-block>
+				<img src="${ block.image.thumb.url }"><img>
+				<h3 class="block-title">${block.generated_title}</h3>
+			</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
@@ -126,10 +132,17 @@ let renderBlock = (block) => {
 		// Linked audio!
 		else if (embed.includes('rich')) {
 			// …up to you!
+			let linkedAudioItem = 
+			`
+			<li class="linked-audio-block">
+				<img src="${ block.image.thumb.url }"><img>
+				<h3 class="block-title">${ block.generated_title }</h3>
+			</li>
+			`
+			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
 		}
 	}
 }
-
 
 
 // It‘s always good to credit your work:
@@ -137,7 +150,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 	let userAddress =
 		`
 		<address>
-			<img src="${ user.avatar_image.display }">
+			<img src="${ user.avatar_image.display }"></img>
 			<h3>${ user.first_name }</h3>
 			<p><a href="https://are.na/${ user.slug }">Are.na profile ↗</a></p>
 		</address>
