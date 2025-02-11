@@ -77,31 +77,32 @@ li {
 	overflow: hidden;
 }
 
+.image-block img, .linked-video-block img, .linked-audio-block img, .link-block img{
+	width: 300px;
+	height: 271px;
+	object-fit: cover;
+	filter: grayscale(1) contrast(1.2) brightness(1.02);
+	z-index: 1;
+	overflow-y: hidden;
+	border: 1px solid grey;
+}
+
 /*heart mask from code pen (https://codepen.io/t_afif/pen/PoRwjPM)*/
 img:hover {
-	 --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+	--_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
 	-webkit-mask-box-image: var(--_m);
 	mask-border: var(--_m);
 	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+	/*heart on hover goes red*/
+	mix-blend-mode: luminosity;
+	border: 0;
 }
 
 img:hover .block {
 	-webkit-mask-box-image: var(--_m);
 	mask-border: var(--_m);
 	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-	filter: none;
-	-webkit-filter: none;
-}
-
-.image-block img, .linked-video-block img, .linked-audio-block img, .link-block img{
-	width: 300px;
-	height: 271px;
-	object-fit: cover;
-	mix-blend-mode: luminosity;
-	filter: grayscale(1) contrast(1.2) brightness(1.02);
-	z-index: 1;
-	border: 1px solid rgb(109, 0, 0);
-	overflow-y: hidden;
+	filter: grayscale(0%) contrast(0%) brightness(0%);
 }
 
 img {
