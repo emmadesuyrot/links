@@ -29,7 +29,7 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li>
+			<li class="link-block">
 				<img src="${ block.image.original.url }"></img>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
@@ -44,7 +44,7 @@ let renderBlock = (block) => {
 		let imageItem = 
 		`
 			<li class="image-block">
-				<img class="image" src="${block.image.original.url}"></img>
+				<img src="${block.image.original.url}"></img>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
 		`
@@ -87,7 +87,8 @@ let renderBlock = (block) => {
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
 			// …up to you!
-			let pdfItem = `
+			let pdfItem = 
+			`
 				<li class="pdf-block">
 					<img src="${ block.contents.image.original.url }"></img>
 					<h3 class="block-title">${block.title}</h3>
@@ -101,8 +102,8 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li>
-					<audio controls src="${ block.attachment.url }"></audio>
+				<li class="audio-block">
+					<audio controls><source src="${block.attachment.url}" type="audio/mp3"></audio>
 					<h3 class="block-title">${block.generated_title}</h3>
 				</li>
 				`
