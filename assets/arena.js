@@ -75,7 +75,10 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				<li class="video-block">
-					<img src="${ block.image.thumb.url }">
+					<video autoplay muted>
+					<source src="${ block.source.url }" type="video/mp4">
+					<source src="${ block.source.url }" type="video/ogg">
+					</video>
 					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
@@ -120,11 +123,21 @@ let renderBlock = (block) => {
 		if (embed.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
+				// `
+				// <li class="video-block">
+				// 	<video autoplay muted>
+				// 	<source src="${ block.source.url }" type="video/mp4">
+				// 	<source src="${ block.source.url }" type="video/ogg">
+				// 	</video>
+				// 	<h3 class="block-title">${block.title}</h3>
+				// </li>
+				// `
+
 				`
-				<li class="linked-video-block>
-				<img src="${ block.image.thumb.url }"><img>
-				<h3 class="block-title">${block.generated_title}</h3>
-			</li>
+				<li class="video-block">
+					<iframe type=\"text/html\" src = "${ block.source.url }"></iframe>
+					<h3 class="block-title">${block.title}</h3>
+				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
