@@ -149,12 +149,13 @@ let renderBlock = (block) => {
 			let linkedAudioItem = 
 			`
 			<li class="linked-audio-block">
-				<img src="${ block.image.thumb.url }"><img>
+				<img src="${ block.image.thumb.url }"></img>
 				<h3 class="block-title">${ block.generated_title }</h3>
 			</li>
 			`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
 		}
+
 	}
 }
 
