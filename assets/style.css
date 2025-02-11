@@ -77,6 +77,22 @@ li {
 	overflow: hidden;
 }
 
+/*heart mask from code pen (https://codepen.io/t_afif/pen/PoRwjPM)*/
+img:hover {
+	 --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+	-webkit-mask-box-image: var(--_m);
+	mask-border: var(--_m);
+	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+img:hover .block {
+	-webkit-mask-box-image: var(--_m);
+	mask-border: var(--_m);
+	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+	filter: none;
+	-webkit-filter: none;
+}
+
 .image-block img, .linked-video-block img, .linked-audio-block img, .link-block img{
 	width: 300px;
 	height: 271px;
