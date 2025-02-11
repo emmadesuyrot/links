@@ -135,10 +135,12 @@ let renderBlock = (block) => {
 
 				`
 				<li class="video-block">
-					<iframe type=\"text/html\" src = "${ block.source.url }"></iframe>
+				
+					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
+				// <iframe type=\"text/html\" src = "${ block.source.url }"></iframe>
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
