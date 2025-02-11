@@ -18,6 +18,13 @@ body {
 	font-family: 'Lora', serif;
 }
 
+header .gutters {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
 h1 {
 	font-family: var(--font-heading);
 	font-size: calc(var(--base-size) * 3.2);
@@ -41,7 +48,6 @@ p {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 0.875);
 	line-height: 1.6;
-
 }
 
 ul {
@@ -167,6 +173,12 @@ header {
 	padding-block-end: calc(3 * var(--base-size));
 }
 
+#channel-description {
+	max-width: 50ch;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .nav {
 	font-size: calc(var(--base-size) * 1);
 }
@@ -206,6 +218,12 @@ p {
 	padding: 0 40px;
 }
 
+#channel-description {
+	max-width: 65ch;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .nav {
 	padding-left: calc(var(--gutter-size) * 8);
 	padding-right: calc(var(--gutter-size) * 8);
@@ -221,6 +239,12 @@ p {
 
 h1 {
 	font-size: calc(var(--base-size) * 5);
+}
+
+#channel-description {
+	max-width: 65ch;
+	margin: 0 auto;
+	text-align: center;
 }
 
 p {
