@@ -106,9 +106,9 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li class="audio-block">
-					<audio controls src="${block.attachment.url}">
-					<source src="${block.attachment.url}" type="audio/mpeg"></audio>
-
+					<audio controls> <source src="${block.attachment.url}">
+					<source src="${block.attachment.url}" type="audio/mp3">
+					</audio>
 					<h3 class="block-title">${block.generated_title}</h3>
 				</li>
 				`

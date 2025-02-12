@@ -132,7 +132,6 @@ blockquote {
 	color: rgb(131, 74, 74);
 }
 
-
 cite {
 	margin-top: 1rem;
 }
@@ -146,6 +145,8 @@ cite {
 	border: 1px solid grey;
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
+
+
 
 .link-block {
 	width: 300px;
