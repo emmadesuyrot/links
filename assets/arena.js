@@ -106,9 +106,7 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li class="audio-block">
-					<audio controls> <source src="${block.attachment.url}">
-					<source src="${block.attachment.url}" type="audio/mp3">
-					</audio>
+					<audio controls src="${block.attachment.url}"></audio>
 					<h3 class="block-title">${block.generated_title}</h3>
 				</li>
 				`
@@ -116,6 +114,9 @@ let renderBlock = (block) => {
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
 	}
+
+	// <audio controls src="${block.attachment.url}"></audio>
+
 
 	// Linked media…
 	else if (block.class == 'Media') {
@@ -134,10 +135,8 @@ let renderBlock = (block) => {
 				// 	<h3 class="block-title">${block.title}</h3>
 				// </li>
 				// `
-
 				`
 				<li class="video-block">
-				
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</li>

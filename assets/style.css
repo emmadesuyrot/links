@@ -126,6 +126,11 @@ img {
 	box-shadow: inset 0px 0px 30px rgb(43, 1, 1);
 }
 
+.audio-block audio {
+	width: 300px;
+	height: 300px;
+}
+
 blockquote {
 	font-size: calc(var(--base-size) * 0.875);
 	padding: calc(var(--gutter-size)* 2);
@@ -145,8 +150,6 @@ cite {
 	border: 1px solid grey;
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
-
-
 
 .link-block {
 	width: 300px;
