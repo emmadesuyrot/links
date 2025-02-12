@@ -79,12 +79,12 @@ li {
 
 .image-block img, .linked-video-block img, .linked-audio-block img, .link-block img{
 	width: 300px;
-	height: 271px;
+	height: 300px;
 	object-fit: cover;
-	filter: grayscale(1) contrast(1.2) brightness(1.02);
 	z-index: 1;
 	overflow-y: hidden;
 	border: 1px solid grey;
+	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
 
 /*heart mask from code pen (https://codepen.io/t_afif/pen/PoRwjPM)*/
@@ -93,6 +93,7 @@ img:hover {
 	-webkit-mask-box-image: var(--_m);
 	mask-border: var(--_m);
 	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+	
 	/*heart on hover goes red*/
 	mix-blend-mode: luminosity;
 	border: 0;
@@ -107,7 +108,7 @@ img:hover .block {
 
 img {
 	width: 300px;
-	height: 271px;
+	height: 300px;
 	flex-grow: 1;
 	object-fit: cover;
 	overflow-y: hidden;
@@ -136,18 +137,14 @@ cite {
 	margin-top: 1rem;
 }
 
-.video-block, .linked-video-block, .linked-audio-block, .link-block {
+/*youtube block*/
+.video-block iframe {
 	width: 300px;
 	height: 300px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
-
-.video-block iframe {
 	border: none;
 	border: 1px solid rgb(109, 0, 0);
+	border: 1px solid grey;
+	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
 
 .link-block {
