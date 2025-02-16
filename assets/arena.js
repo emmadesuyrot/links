@@ -29,7 +29,7 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li class="link-block">
+			<li class="link-block polaroid">
 				<img src="${ block.image.original.url }"></img>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
@@ -57,7 +57,7 @@ let renderBlock = (block) => {
 		// console.log(block.content_html)
 		let textItem = 
 		`
-			<li class="text-block">
+			<li class="text-block polaroid">
 				<blockquote>${block.content}</blockquote>
 				<h3 class="block-title">${block.title}</h3>
 			</li>
@@ -74,7 +74,7 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li class="video-block">
+				<li class="video-block polaroid">
 					<video autoplay muted>
 					<source src="${ block.source.url }" type="video/mp4">
 					<source src="${ block.source.url }" type="video/ogg">
@@ -92,7 +92,7 @@ let renderBlock = (block) => {
 			// …up to you!
 			let pdfItem = 
 			`
-				<li class="pdf-block">
+				<li class="pdf-block polaroid">
 					<img src="${ block.contents.image.original.url }"></img>
 					<h3 class="block-title">${block.title}</h3>
 				</li>
@@ -105,7 +105,7 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li class="audio-block">
+				<li class="audio-block polaroid">
 					<audio controls src="${block.attachment.url}"></audio>
 					<h3 class="block-title">${block.generated_title}</h3>
 				</li>
@@ -126,22 +126,12 @@ let renderBlock = (block) => {
 		if (embed.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
-				// `
-				// <li class="video-block">
-				// 	<video autoplay muted>
-				// 	<source src="${ block.source.url }" type="video/mp4">
-				// 	<source src="${ block.source.url }" type="video/ogg">
-				// 	</video>
-				// 	<h3 class="block-title">${block.title}</h3>
-				// </li>
-				// `
 				`
-				<li class="video-block">
+				<li class="video-block polaroid">
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
-				// <iframe type=\"text/html\" src = "${ block.source.url }"></iframe>
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
@@ -151,7 +141,7 @@ let renderBlock = (block) => {
 			// …up to you!
 			let linkedAudioItem = 
 			`
-			<li class="linked-audio-block">
+			<li class="linked-audio-block polaroid">
 				<img src="${ block.image.thumb.url }"></img>
 				<h3 class="block-title">${ block.generated_title }</h3>
 			</li>
