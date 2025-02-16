@@ -89,8 +89,32 @@ li {
 	object-fit: cover;
 	z-index: 1;
 	overflow-y: hidden;
-	border: 1px solid grey;
+	border: none;
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
+}
+
+.polaroid {
+	display: inline-block;
+	background: white;
+	padding: 15px 15px 50px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	font-family: var(--font-body);
+	font-size: 14px;
+	color: #333;
+	width: fit-content;
+}
+
+.polaroid img {
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	 border: none;
+}
+
+.polaroid:hover {
+	transform: rotate(0deg) scale(1.05);
 }
 
 img {
