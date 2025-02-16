@@ -87,25 +87,6 @@ li {
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
 
-/*heart mask from code pen (https://codepen.io/t_afif/pen/PoRwjPM)*/
-img:hover {
-	--_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
-	-webkit-mask-box-image: var(--_m);
-	mask-border: var(--_m);
-	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-	
-	/*heart on hover goes red*/
-	mix-blend-mode: luminosity;
-	border: 0;
-}
-
-img:hover .block {
-	-webkit-mask-box-image: var(--_m);
-	mask-border: var(--_m);
-	clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-	filter: grayscale(0%) contrast(0%) brightness(0%);
-}
-
 img {
 	width: 300px;
 	height: 300px;
