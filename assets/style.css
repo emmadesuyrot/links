@@ -4,14 +4,19 @@ body {
 
 	--color--primary: black;
 	--color--secondary: gold;
-	--color--background: #4a0000;
+	/* --color--background: #4a0000; */
 	--color--primary-red: #ff0101;
-	--color--re-shadow: #ff0101bb;
+	--color--re-shadow: #dd0000bb;
 
 	--font-body: 'Lora', serif;
 	--font-heading: 'Pinyon Script', cursive;
+
+	/* background image */
+	background-image: url('images/paper-texture.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	
-	background-color: var(--color--background);
 	text-align: center;
 	color: var(--color--primary-red);
 	font-size: var(--base-size);
@@ -29,8 +34,9 @@ h1 {
 	font-family: var(--font-heading);
 	font-size: calc(var(--base-size) * 3.2);
 	line-height: 2;
-	color: white;
-	text-shadow: 0 0 5px var(--color--re-shadow);
+	color: var(--color--re-shadow);
+	text-shadow: 0 0 2px var(--color--re-shadow);
+	opacity: 80%;
 }
 
 h2 {
@@ -63,8 +69,8 @@ ul {
 
 li {
 	flex-grow: 1;
-	height: 300px;
-	width: 300px;
+	height: 250px;
+	width: 250px;
 	overflow: hidden;
 	flex: 0 0 auto;
 	display: flex;
@@ -78,8 +84,8 @@ li {
 }
 
 .image-block img, .linked-video-block img, .linked-audio-block img, .link-block img{
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	object-fit: cover;
 	z-index: 1;
 	overflow-y: hidden;
@@ -88,16 +94,16 @@ li {
 }
 
 img {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	flex-grow: 1;
 	object-fit: cover;
 	overflow-y: hidden;
 }
 
 .text-block blockquote {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -108,8 +114,8 @@ img {
 }
 
 .audio-block audio {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 }
 
 blockquote {
@@ -124,8 +130,8 @@ cite {
 
 /*youtube block*/
 .video-block iframe {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	border: none;
 	border: 1px solid rgb(109, 0, 0);
 	border: 1px solid grey;
@@ -133,8 +139,8 @@ cite {
 }
 
 .link-block {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
