@@ -246,11 +246,11 @@ button:hover {
 }
 
 /* filter buttons */
-.show-video li, .show-image li, .show-text li, .show-audio li, .show-pdf li {
+.show-video li, .show-image li, .show-text li, .show-audio li, .show-pdf li, .show-linked-audio li, .show-link li {
 	display: none;
 }
 
-.show-video li.video-block, .show-image li.image-block, .show-text li.text-block, .show-audio li.audio-block, .show-pdf li.pdf-block {
+.show-video li.video-block, .show-image li.image-block, .show-text li.text-block, .show-audio li.audio-block, .show-pdf li.pdf-block, .show-linked-audio li.linked-audio-block, .show-link li.link-block {
 	display: flex;
 }
 
