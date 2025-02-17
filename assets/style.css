@@ -246,11 +246,19 @@ button:hover {
 }
 
 .show-video li {
-	display:none;
+	display: none;
 }
 
 .show-video li.video-block {
 	display: flex;
+}
+
+.show-image li.image-block {
+	display: flex;
+}
+
+.show-image li {
+	display: none;
 }
 
 @media (min-width: 768px) {
