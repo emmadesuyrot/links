@@ -152,7 +152,6 @@ let renderBlock = (block) => {
 	}
 }
 
-
 // It‘s always good to credit your work:
 let renderUser = (user, container) => { // You can have multiple arguments for a function!
 	let userAddress =
