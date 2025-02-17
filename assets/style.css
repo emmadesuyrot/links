@@ -24,6 +24,14 @@ body {
 	font-family: 'Lora', serif;
 }
 
+.content-grid {
+	display: block;
+}
+
+.grid-left, .grid-right {
+	width: 100%;
+}
+
 header .gutters {
 	display: flex;
 	flex-direction: column;
@@ -283,6 +291,28 @@ p {
 	font-size: calc(var(--base-size) * 1.25);
 	line-height: 1.6;
 	padding: 0 40px;
+}
+
+.content-grid {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	gap: 20px;
+}
+
+.grid-left {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.grid-right {
+	padding: 20px;
+	overflow-y: auto;
+}
+
+header.gutters {
+	padding: 20px;
 }
 
 .nav {
