@@ -163,25 +163,36 @@ li {
 	z-index: 1;
 }
 
-.nav {
+.navbar {
 	position: fixed;
-	font-family: var(--font-body);
 	top: 0;
-	text-align: center;
+	left: 0;
 	width: 100%;
+	height: 50px;
+	background: white;
+	border: 1px solid var(--color--primary-red);
+	font-size: calc(var(--base-size) * 1);
+	font-family: var(--font-body);
 	display: flex;
 	justify-content: space-between;
-	padding: var(--gutter-size);
-	text-transform: uppercase;
-	gap: var(--gutter-size);
-	backdrop-filter: blur(10px);
+	align-items: center;
+	padding: 0 30px;
 	z-index: 1;
 }
 
-.nav-item {
-	padding: calc(var(--gutter-size) * 0.5);
-	font-size: calc(var(--base-size) * 0.875);
+.nav-title {
 	font-weight: bold;
+}
+
+.navbar a {
+	color: black;
+	border: 1px solid var(--color--primary-red);
+	padding: 5px 10px;
+}
+
+.navbar a:hover {
+	background: var(--color--primary-red);
+	color: white;
 }
 
 @media (min-width: 600px) {
@@ -201,10 +212,6 @@ header {
 	max-width: 50ch;
 	margin: 0 auto;
 	text-align: center;
-}
-
-.nav {
-	font-size: calc(var(--base-size) * 1);
 }
 
 #main-content {
@@ -242,11 +249,6 @@ p {
 	max-width: 65ch;
 	margin: 0 auto;
 	text-align: center;
-}
-
-.nav {
-	padding-left: calc(var(--gutter-size) * 8);
-	padding-right: calc(var(--gutter-size) * 8);
 }
 
 }
@@ -306,12 +308,6 @@ p {
 
 header.gutters {
 	padding: 20px;
-}
-
-.nav {
-	padding-left: calc(var(--gutter-size) * 10);
-	padding-right: calc(var(--gutter-size) * 10);
-	font-size: calc(var(--base-size) * 1.2);
 }
 
 }
