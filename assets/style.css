@@ -245,20 +245,13 @@ button:hover {
 	color: white;
 }
 
-.show-video li {
+/* filter buttons */
+.show-video li, .show-image li, .show-text li, .show-audio li, .show-pdf li {
 	display: none;
 }
 
-.show-video li.video-block {
+.show-video li.video-block, .show-image li.image-block, .show-text li.text-block, .show-audio li.audio-block, .show-pdf li.pdf-block {
 	display: flex;
-}
-
-.show-image li.image-block {
-	display: flex;
-}
-
-.show-image li {
-	display: none;
 }
 
 @media (min-width: 768px) {
