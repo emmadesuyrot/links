@@ -192,8 +192,38 @@ li {
 	cursor: pointer;
 }
 
-.navbar a:hover {
-	background-color: #c0000051;
+label {
+	font-size: var(--base-size);
+	font-family: var(--font-body);
+	color: var(--color--re-shadow);
+	font-weight: 500;
+}
+
+.snapshot-label {
+	display: flex;
+	flex-direction: column;
+	font-size: var(--base-size);
+	font-family: var(--font-body);
+	font-weight: 500;
+}
+
+.snapshot {
+	width: 100%;
+	max-width: 150px;
+	padding: 5px;
+	margin: 2px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	cursor: pointer;
+	font-size: var(--base-size);
+	font-family: var(--font-body);
+}
+
+.snapshot:focus {
+	outline: none;
+	border-color: var(--color--re-shadow);
+	color: var(--color--re-shadow);
 }
 
 @media (min-width: 600px) {
