@@ -38,6 +38,7 @@ let renderBlock = (block) => {
 						<div>
 							<p>${block.title}</p>
 							<p>${block.description_html}</p>
+							<a href="${block.image.original.url}">See original ↗</a>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
@@ -63,6 +64,7 @@ let renderBlock = (block) => {
 							<p>${block.description_html}</p>
 						</div>
 						<img src="${block.image.original.url}"></img>
+						<a href="${block.image.original.url}">See original ↗</a>
 						<button class="Close">×</button>
 					</dialog>
 			</li>
@@ -84,7 +86,7 @@ let renderBlock = (block) => {
 				<dialog>
 						<div>
 							<p>${block.title}</p>
-							<blockquote>${block.content}</blockquote>
+							<p>${block.content}</p>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
@@ -115,6 +117,7 @@ let renderBlock = (block) => {
 							<p>${block.title}</p>
 							<source src="${ block.source.url }" type="video/mp4">
 							<source src="${ block.source.url }" type="video/ogg">
+							<a href="${ block.source.url }">See original ↗</a>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
@@ -165,9 +168,11 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li class="video-block polaroid">
+				<li class="video-block">
+				<button class="polaroid">
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
+				</button>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
@@ -205,7 +210,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 
 let initInteraction = () => {
 	// add block here or just ('li') to target all blocks
-	let blocks = document.querySelectorAll('.image-block, .link-block')
+	let blocks = document.querySelectorAll('.image-block, .link-block, .text-block')
 	blocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
@@ -224,26 +229,6 @@ let initInteraction = () => {
 				dialog.close() // Close it then too.
 			}}
 	})
-
-	// let textBlocks = document.querySelectorAll('.text-block')
-	// textBlocks.forEach((block) => {
-	// 	let openButton = block.querySelector('button')
-	// 	let dialog = block.querySelector('dialog')
-	// 	let closeButton = dialog.querySelector('button')
-		
-	// 	openButton.onclick = () => {
-	// 		dialog.showModal()
-	// 	}
-
-	// 	closeButton.onclick = () => {
-	// 		dialog.close()
-	// 	}
-
-	// 	dialog.onclick = (event) => { // Listen on our `modal` also…
-	// 		if (event.target == dialog) { // Only if clicks are to itself (the background).
-	// 			dialog.close() // Close it then too.
-	// 		}}
-	// })
 }
 
 // Now that we have said what we can do, go get the data:
