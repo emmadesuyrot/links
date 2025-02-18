@@ -230,7 +230,7 @@ footer {
 	padding-inline: var(--gutter-size);
 }
 
-button {
+/* button {
 	font-size: calc(var(--base-size) * 1);
 	font-family: var(--font-body);
 	border: 1px solid var(--color--primary-red);
@@ -243,7 +243,7 @@ button {
 button:hover {
 	background-color: var(--color--primary-red);
 	color: white;
-}
+} */
 
 /* filter buttons */
 .show-video li, .show-image li, .show-text li, .show-audio li, .show-pdf li, .show-linked-audio li, .show-link li {
@@ -253,6 +253,29 @@ button:hover {
 .show-video li.video-block, .show-image li.image-block, .show-text li.text-block, .show-audio li.audio-block, .show-pdf li.pdf-block, .show-linked-audio li.linked-audio-block, .show-link li.link-block {
 	display: flex;
 }
+
+button {
+	cursor: pointer;
+}
+
+.image-block dialog[open] {
+	display: flex;
+	flex-direction: column;
+}
+
+::backdrop {
+	background-color: rgb(0 0 0 / 75%); /* A dark overlay. */
+	backdrop-filter: blur(8px); /* Maybe a little “glassmorphism”? */
+}
+
+body:has(dialog[open]) {
+	background-color: #4a0000;
+	overflow: hidden;
+}
+
+/* .image-block:has(dialog[open]) {
+
+} */
 
 @media (min-width: 768px) {
 	:root {

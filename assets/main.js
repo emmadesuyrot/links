@@ -55,5 +55,3 @@ showAllButton.onclick = () => {
 	channelBlocks.classList.remove('show-link')
 }
 
-
-

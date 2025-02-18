@@ -44,8 +44,18 @@ let renderBlock = (block) => {
 		let imageItem = 
 		`
 			<li class="image-block polaroid">
-					<img src="${block.image.original.url}"></img>
-					<h3 class="block-title">${block.title}</h3>
+				<button class="polaroid">
+						<img src="${block.image.original.url}"></img>
+						<h3 class="block-title">${block.title}</h3>
+					</button>
+					<dialog>
+						<div>
+							<p>${block.title}</p>
+							<p>${block.description_html}</p>
+						</div>
+						<img src="${block.image.original.url}"></img>
+						<button class="Close">×</button>
+					</dialog>
 			</li>
 		`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem);
@@ -165,6 +175,28 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 	container.insertAdjacentHTML('beforeend', userAddress)
 }
 
+let initInteraction = () => {
+	let imageBlocks = document.querySelectorAll('.image-block')
+	imageBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+		
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => { // Listen on our `modal` also…
+			if (event.target == dialog) { // Only if clicks are to itself (the background).
+				dialog.close() // Close it then too.
+			}}
+	})
+}
+
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
 	.then((response) => response.json()) // Return it as JSON data
@@ -177,4 +209,6 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			// console.log(block) // The data for a single block
 			renderBlock(block) // Pass the single block data to the render function
 		})
+
+		initInteraction()
 	})
