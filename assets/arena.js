@@ -43,7 +43,7 @@ let renderBlock = (block) => {
 		// …up to you!
 		let imageItem = 
 		`
-			<li class="image-block polaroid">
+			<li class="image-block">
 				<button class="polaroid">
 						<img src="${block.image.original.url}"></img>
 						<h3 class="block-title">${block.title}</h3>
