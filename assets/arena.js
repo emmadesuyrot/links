@@ -129,29 +129,51 @@ let renderBlock = (block) => {
 		}
 
 		// Uploaded PDFs!
-		else if (attachment.includes('pdf')) {
-			// …up to you!
-			let pdfItem = 
-			`
-				<li class="pdf-block polaroid">
-					<img src="${ block.contents.image.original.url }"></img>
-					<h3 class="block-title">${block.title}</h3>
-				</li>
-			`
-			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
-		}
+		// else if (attachment.includes('pdf')) {
+		// 	// …up to you!
+		// 	let pdfItem = 
+		// 	`
+		// 		<li class="pdf-block">
+		// 			<button class="polaroid">
+		// 				<img src="${ block.contents.image.original.url }"></img>
+		// 				<h3 class="block-title">${block.title}</h3>
+		// 			</button>
+		// 			<dialog>
+		// 				<div>
+		// 					<p>${block.title}</p>
+		// 					<p>${block.description_html}</p>
+		// 				</div>
+		// 				<img src="${block.image.original.url}"></img>
+		// 				<a href="${block.image.original.url}">See original ↗</a>
+		// 				<button class="Close">×</button>
+		// 			</dialog>
+		// 		</li>
+		// 	`
+		// 	channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+		// }
 
 		// Uploaded audio!
 		else if (attachment.includes('audio')) {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li class="audio-block polaroid">
+				<li class="audio-block">
+				<button class="polaroid">
 					<audio controls src="${block.attachment.url}"></audio>
 					<h3 class="block-title">${block.generated_title}</h3>
+				</button>
+				<dialog>
+						<div>
+							<p>${ block.generated_title }</p>
+							<p>${block.content}</p>
+							<audio controls src="${block.attachment.url}"></audio>
+						</div>
+					<button class="Close">×</button>
+				</dialog>
 				</li>
 				`
-			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+			channelBlocks.insertAdjacentHTML('beforeend', audioItem);
+			console.log("Success!");
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
 	}
@@ -173,6 +195,12 @@ let renderBlock = (block) => {
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</button>
+				<dialog>
+						<div>
+							<p>${block.title}</p>
+						</div>
+					<button class="Close">×</button>
+				</dialog>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
@@ -184,9 +212,18 @@ let renderBlock = (block) => {
 			// …up to you!
 			let linkedAudioItem = 
 			`
-			<li class="linked-audio-block polaroid">
+			<li class="linked-audio-block">
+			<button class="polaroid">
 				<img src="${ block.image.thumb.url }"></img>
 				<h3 class="block-title">${ block.generated_title }</h3>
+			</button>
+				<dialog>
+						<div>
+							<p>${ block.generated_title }</p>
+							<img src="${ block.image.thumb.url }"></img>
+						</div>
+						<button class="Close">×</button>
+				</dialog>
 			</li>
 			`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
@@ -210,7 +247,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 
 let initInteraction = () => {
 	// add block here or just ('li') to target all blocks
-	let blocks = document.querySelectorAll('.image-block, .link-block, .text-block')
+	let blocks = document.querySelectorAll('.image-block, .link-block, .text-block, linked-audio-block, .audio.block, .video-block')
 	blocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
