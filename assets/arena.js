@@ -76,9 +76,18 @@ let renderBlock = (block) => {
 		// console.log(block.content_html)
 		let textItem = 
 		`
-			<li class="text-block polaroid">
-				<blockquote>${block.content}</blockquote>
-				<h3 class="block-title">${block.title}</h3>
+			<li class="text-block">
+				<button class="polaroid">
+					<blockquote>${block.content}</blockquote>
+					<h3 class="block-title">${block.title}</h3>
+				</button>
+				<dialog>
+						<div>
+							<p>${block.title}</p>
+							<blockquote>${block.content}</blockquote>
+						</div>
+						<button class="Close">×</button>
+				</dialog>
 			</li>
 		`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
@@ -93,12 +102,22 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li class="video-block polaroid">
+				<li class="video-block">
+				<button class="polaroid">
 					<video autoplay muted>
 					<source src="${ block.source.url }" type="video/mp4">
 					<source src="${ block.source.url }" type="video/ogg">
 					</video>
 					<h3 class="block-title">${block.title}</h3>
+				</button>
+				<dialog>
+						<div>
+							<p>${block.title}</p>
+							<source src="${ block.source.url }" type="video/mp4">
+							<source src="${ block.source.url }" type="video/ogg">
+						</div>
+						<button class="Close">×</button>
+				</dialog>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
@@ -205,6 +224,26 @@ let initInteraction = () => {
 				dialog.close() // Close it then too.
 			}}
 	})
+
+	// let textBlocks = document.querySelectorAll('.text-block')
+	// textBlocks.forEach((block) => {
+	// 	let openButton = block.querySelector('button')
+	// 	let dialog = block.querySelector('dialog')
+	// 	let closeButton = dialog.querySelector('button')
+		
+	// 	openButton.onclick = () => {
+	// 		dialog.showModal()
+	// 	}
+
+	// 	closeButton.onclick = () => {
+	// 		dialog.close()
+	// 	}
+
+	// 	dialog.onclick = (event) => { // Listen on our `modal` also…
+	// 		if (event.target == dialog) { // Only if clicks are to itself (the background).
+	// 			dialog.close() // Close it then too.
+	// 		}}
+	// })
 }
 
 // Now that we have said what we can do, go get the data:
