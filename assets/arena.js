@@ -29,9 +29,18 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li class="link-block polaroid">
-				<img src="${ block.image.original.url }"></img>
-				<h3 class="block-title">${block.title}</h3>
+			<li class="link-block">
+				<button class="polaroid">
+					<img src="${ block.image.original.url }"></img>
+					<h3 class="block-title">${block.title}</h3>
+				</button>
+				<dialog>
+						<div>
+							<p>${block.title}</p>
+							<p>${block.description_html}</p>
+						</div>
+						<button class="Close">×</button>
+					</dialog>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -178,6 +187,26 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 let initInteraction = () => {
 	let imageBlocks = document.querySelectorAll('.image-block')
 	imageBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+		
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => { // Listen on our `modal` also…
+			if (event.target == dialog) { // Only if clicks are to itself (the background).
+				dialog.close() // Close it then too.
+			}}
+	})
+
+	let linkBlocks = document.querySelectorAll('.link-block')
+	linkBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
 		let closeButton = dialog.querySelector('button')
