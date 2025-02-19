@@ -55,7 +55,10 @@
 // 	channelBlocks.classList.remove('show-link')
 // }
 
-// html element: event chnage. source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+// html element: event chnage. source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event 
+// I wanted to use a filter instead of having multiple buttons to sort my blocks!
+// the script matches the html <label>
+
 
 let channelBlocks = document.querySelector('#channel-blocks');
 let selectElement = document.querySelector('.snapshot');
@@ -71,9 +74,11 @@ selectElement.addEventListener('change', (event) => {
 	{channelBlocks.classList.add('show-image');}
 	else if (selectedValue === 'show-text-button')
 	
+	// gathered blocks that include text
 	{channelBlocks.classList.add('show-text', 'show-link');}
 	else if (selectedValue === 'show-audio-button')
 
+	// gathered all audio blocks
 	{channelBlocks.classList.add('show-audio', 'show-linked-audio');
 }
 
