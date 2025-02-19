@@ -86,7 +86,7 @@ let renderBlock = (block) => {
 				<dialog>
 						<div>
 							<p>${block.title}</p>
-							<p>${block.content}</p>
+							<p class="dialog-content">${block.content}</p>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
