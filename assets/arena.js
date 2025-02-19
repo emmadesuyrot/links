@@ -198,6 +198,7 @@ let renderBlock = (block) => {
 				<dialog>
 						<div>
 							<p>${block.title}</p>
+							<iframe ${block.embed.html} </iframe>
 						</div>
 					<button class="Close">×</button>
 				</dialog>
