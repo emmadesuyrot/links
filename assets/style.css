@@ -365,6 +365,29 @@ button {
 	border-radius: 5px;
 }
 
+.linked-audio-block dialog {
+	width: 250px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 5px;
+	background-color: white;
+
+	height: auto;
+	overflow: hidden;
+	transform: translate(-50%,-50%);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.linked-audio-block dialog img {
+	width: 250px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 5px;
+	padding: 10px;
+}
+
 .link-block dialog, .text-block dialog {
 	width: 250px;
 	height: auto;
