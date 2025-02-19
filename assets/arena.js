@@ -248,7 +248,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 
 let initInteraction = () => {
 	// add block here or just ('li') to target all blocks
-	let blocks = document.querySelectorAll('.image-block, .link-block, .text-block, linked-audio-block, .audio.block, .video-block')
+	let blocks = document.querySelectorAll('.image-block, .link-block, .text-block, .linked-audio-block, .audio-block, .video-block')
 	blocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
