@@ -36,7 +36,7 @@ let renderBlock = (block) => {
 				</button>
 				<dialog>
 						<div>
-							<p>${block.title}</p>
+							<p class="block-title-style">${block.title}</p>
 							<p>${block.description_html}</p>
 							<a href="${block.image.original.url}">See original ↗</a>
 						</div>
@@ -60,7 +60,7 @@ let renderBlock = (block) => {
 					</button>
 					<dialog>
 						<div>
-							<p>${block.title}</p>
+							<p class="block-title-style">${block.title}</p>
 							<p>${block.description_html}</p>
 						</div>
 						<img src="${block.image.original.url}"></img>
@@ -85,7 +85,7 @@ let renderBlock = (block) => {
 				</button>
 				<dialog>
 						<div>
-							<p>${block.title}</p>
+							<p class="block-title-style">${block.title}</p>
 							<p class="dialog-content">${block.content}</p>
 						</div>
 						<button class="Close">×</button>
@@ -115,7 +115,7 @@ let renderBlock = (block) => {
 				</button>
 				<dialog>
 						<div>
-							<p>${block.title}</p>
+							<p class="block-title-style">${block.title}</p>
 							<source src="${ block.source.url }" type="video/mp4">
 							<source src="${ block.source.url }" type="video/ogg">
 							<a href="${ block.source.url }">See original ↗</a>
@@ -172,7 +172,7 @@ let renderBlock = (block) => {
 				</button>
 				<dialog>
 						<div>
-							<p>${ block.generated_title }</p>
+							<p class="block-title-style">${ block.generated_title }</p>
 							<p>${block.content}</p>
 							<audio controls src="${block.attachment.url}"></audio>
 						</div>
@@ -205,7 +205,7 @@ let renderBlock = (block) => {
 				</button>
 				<dialog>
 						<div>
-							<p>${block.title}</p>
+							<p class="block-title-style">${block.title}</p>
 							<iframe ${block.embed.html} </iframe>
 						</div>
 					<button class="Close">×</button>
@@ -228,7 +228,7 @@ let renderBlock = (block) => {
 			</button>
 				<dialog>
 						<div>
-							<p>${ block.generated_title }</p>
+							<p class="block-title-style">${ block.generated_title }</p>
 							<img src="${ block.image.thumb.url }"></img>
 						</div>
 						<button class="Close">×</button>
