@@ -59,7 +59,6 @@
 // I wanted to use a filter instead of having multiple buttons to sort my blocks!
 // the script matches the html <label>
 
-
 let channelBlocks = document.querySelector('#channel-blocks');
 let selectElement = document.querySelector('.snapshot');
 

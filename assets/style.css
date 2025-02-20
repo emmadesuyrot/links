@@ -88,15 +88,9 @@ p {
 	transform: rotate(10deg);
 }
 
-/* audio */
+/* audio & audio(link) */
 .skew {
-	transform: rotate(-12deg);
-}
-
-/* video */
-.offset {
-	margin-top: 10px;
-	margin-left: 10px;
+	transform: rotate(-10deg);
 }
 
 .polaroid:hover {
@@ -327,6 +321,21 @@ button {
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(-2deg);
 	box-shadow: 2px 2px 10px black;
+	animation: letterAppeal 0.6s ease-out;
+}
+
+/* on [open] animation effect source: https://css-tricks.com/almanac/properties/a/animation/ */
+/* Using the animation to add a sort of letter appeal */
+/* The below keyframes mathces the top element (animation) */
+@keyframes letterAppeal {
+	0% {
+		transform: translate(-50%, -50%) scale(0.8) rotate(-10deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1) rotate(-2deg);
+		opacity: 1;
+	}
 }
 
 .text-block dialog[open] {
@@ -457,10 +466,10 @@ body:has(dialog[open]) {
 	overflow: hidden;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
 	from { opacity: 0; transform: scale(0.9) rotate(-4deg); }
 	to { opacity: 1; transform: scale(1) rotate(-2deg); }
-}
+} */
 
 @media (min-width: 768px) {
 	:root {

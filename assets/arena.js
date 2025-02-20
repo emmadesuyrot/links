@@ -199,7 +199,7 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li class="video-block">
-				<button class="polaroid offset">
+				<button class="polaroid skew">
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</button>
