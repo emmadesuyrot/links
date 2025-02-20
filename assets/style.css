@@ -74,6 +74,31 @@ p {
 	filter: grayscale(1) contrast(1.2) brightness(1.02);
 }
 
+/* image */
+.tilt-left {
+	transform: rotate(-5deg);
+}
+
+/* text */
+.tilt-right {
+	transform: rotate(5deg);
+}
+/* video & linked audio & link */
+.rotate {
+	transform: rotate(10deg);
+}
+
+/* audio */
+.skew {
+	transform: rotate(-12deg);
+}
+
+/* video */
+.offset {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
 .polaroid:hover {
 	filter: none;
 	transform: rotate(0deg) scale(1.05);
@@ -134,11 +159,11 @@ h3 {
 
 ul {
 	display: flex;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	gap: 1rem;
 	list-style: none;
 	justify-content: center;
-	align-items: flex-start;
 	overflow: hidden;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -148,7 +173,7 @@ li {
 	flex: 0 0 auto;
 	width: 250px;
 	height: 250px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

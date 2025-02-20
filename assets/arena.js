@@ -30,7 +30,7 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li class="link-block">
-				<button class="polaroid">
+				<button class="polaroid rotate">
 					<img src="${ block.image.original.url }"></img>
 					<h3 class="block-title">${block.title}</h3>
 				</button>
@@ -54,7 +54,7 @@ let renderBlock = (block) => {
 		let imageItem = 
 		`
 			<li class="image-block">
-				<button class="polaroid">
+				<button class="polaroid tilt-left"">
 						<img src="${block.image.original.url}"></img>
 						<h3 class="block-title">${block.title}</h3>
 					</button>
@@ -79,7 +79,7 @@ let renderBlock = (block) => {
 		let textItem = 
 		`
 			<li class="text-block">
-				<button class="polaroid">
+				<button class="polaroid tilt-right">
 					<blockquote>${block.content}</blockquote>
 					<h3 class="block-title">${block.title}</h3>
 				</button>
@@ -101,11 +101,12 @@ let renderBlock = (block) => {
 
 		// Uploaded videos!
 		if (attachment.includes('video')) {
-			// …still up to you, but we’ll give you the `video` element:
+			// …still up to you, but we’ll give you the `video` element:\\if\\
+
 			let videoItem =
 				`
-				<li class="video-block">
-				<button class="polaroid">
+				<li class="video-block ">
+				<button class="polaroid rotate">
 					<video autoplay muted>
 					<source src="${ block.source.url }" type="video/mp4">
 					<source src="${ block.source.url }" type="video/ogg">
@@ -123,6 +124,13 @@ let renderBlock = (block) => {
 				</dialog>
 				</li>
 				`
+
+				// if (!block.title) {
+				// 	videoItem = `
+				// 	<p>No title</p>
+				// 	`
+				// }
+		
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
@@ -158,7 +166,7 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li class="audio-block">
-				<button class="polaroid">
+				<button class="polaroid skew">
 					<audio controls src="${block.attachment.url}"></audio>
 					<h3 class="block-title">${block.generated_title}</h3>
 				</button>
@@ -191,7 +199,7 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li class="video-block">
-				<button class="polaroid">
+				<button class="polaroid offset">
 					${block.embed.html}
 					<h3 class="block-title">${block.title}</h3>
 				</button>
@@ -214,7 +222,7 @@ let renderBlock = (block) => {
 			let linkedAudioItem = 
 			`
 			<li class="linked-audio-block">
-			<button class="polaroid">
+			<button class="polaroid rotate">
 				<img src="${ block.image.thumb.url }"></img>
 				<h3 class="block-title">${ block.generated_title }</h3>
 			</button>
@@ -284,3 +292,5 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 		initInteraction()
 	})
+
+
