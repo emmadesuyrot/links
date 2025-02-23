@@ -64,7 +64,7 @@ let renderBlock = (block) => {
 							<p>${block.description_html}</p>
 						</div>
 						<img src="${block.image.original.url}"></img>
-						<a href="${block.image.original.url}">See original ↗</a>
+						<a href="${block.image.original.url}">See original Image</a>
 						<button class="Close">×</button>
 					</dialog>
 			</li>
@@ -118,7 +118,7 @@ let renderBlock = (block) => {
 							<p class="block-title-style">${block.title}</p>
 							<source src="${ block.source.url }" type="video/mp4">
 							<source src="${ block.source.url }" type="video/ogg">
-							<a href="${ block.source.url }">See original ↗</a>
+							<a href="${ block.source.url }">See original video</a>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
@@ -167,13 +167,12 @@ let renderBlock = (block) => {
 				`
 				<li class="audio-block">
 				<button class="polaroid skew">
-					<audio controls src="${block.attachment.url}"></audio>
+					<img src="assets/images/audio-image.jpg">
 					<h3 class="block-title">${block.generated_title}</h3>
 				</button>
 				<dialog>
 						<div>
 							<p class="block-title-style">${ block.generated_title }</p>
-							
 							<audio controls src="${block.attachment.url}"></audio>
 						</div>
 					<button class="Close">×</button>
@@ -207,6 +206,7 @@ let renderBlock = (block) => {
 						<div>
 							<p class="block-title-style">${block.title}</p>
 							<iframe ${block.embed.html} </iframe>
+							<a href="${ block.source.url }">See original video</a>
 						</div>
 					<button class="Close">×</button>
 				</dialog>
