@@ -213,6 +213,11 @@ li {
 	cursor: pointer;
 }
 
+.navbar a:hover {
+	background-color: white;
+	color: var(--color--primary-red);
+}
+
 label {
 	font-size: var(--base-size);
 	font-family: var(--font-body);
@@ -237,11 +242,15 @@ label {
 	border: 1.5px solid var(--color--re-shadow);
 	color: var(--color--re-shadow);
 	padding: 5px 15px;
-	border-radius: 5px;
 	font-weight: 500;
 	cursor: pointer;
 	font-size: var(--base-size);
 	font-family: var(--font-body);
+}
+
+.snapshot:hover {
+	background-color: var(--color--re-shadow);
+	color: white;
 }
 
 .snapshot:focus {
@@ -253,7 +262,6 @@ label {
 footer {
 	font-size: 14px;
 	color: var(--color--re-shadow);
-	opacity: 50%;
 	margin-top: 20px;
 }
 
@@ -541,6 +549,12 @@ header {
 	border-radius: 5px;
 	cursor: pointer;
 	font-weight: 600;
+	margin: 20px 0;
+}
+
+#channel-link:hover {
+	background-color: var(--color--re-shadow);
+	color: white; 
 }
 
 #main-content {
@@ -608,10 +622,12 @@ body {
 }
 
 p {
-	font-size: calc(var(--base-size) * 1);
+	font-size: calc(var(--base-size) * 0.9);
 	line-height: 1.6;
 	padding-left: 40px;
-	/* padding-top: 20px; */
+	text-align: left;
+	padding-top: 20px;
+	max-width: 60ch;
 }
 
 .content-grid {
@@ -644,6 +660,11 @@ p {
 
 header.gutters {
 	padding: 20px;
+}
+
+.navbar {
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 }
