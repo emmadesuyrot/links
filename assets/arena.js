@@ -173,7 +173,7 @@ let renderBlock = (block) => {
 				<dialog>
 						<div>
 							<p class="block-title-style">${ block.generated_title }</p>
-							<p>${block.content}</p>
+							
 							<audio controls src="${block.attachment.url}"></audio>
 						</div>
 					<button class="Close">×</button>
