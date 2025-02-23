@@ -359,7 +359,7 @@ button {
 	padding-top: 22px;
 }
 
-.image-block dialog div, .link-block dialog div, .text-block dialog div, .audio-block dialog div, .linked-audio-block dialog div {
+.image-block dialog div, .link-block dialog div, .text-block dialog div, .linked-audio-block dialog div {
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -400,6 +400,15 @@ button {
 dialog audio {
 	width: 100%;
 	height: revert;
+}
+
+.audio-block dialog div {
+	width: 100%;
+}
+
+.audio-block dialog audio {
+	width: 100%;
+	display: block;
 }
 
 .link-block dialog .block-title-style {
