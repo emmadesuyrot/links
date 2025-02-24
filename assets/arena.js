@@ -20,6 +20,7 @@ let placeChannelInfo = (data) => {
 	channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
 
+
 // Then our big function for specific-block-type rendering:
 let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
@@ -292,5 +293,6 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 		initInteraction()
 	})
+
 
 

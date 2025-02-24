@@ -202,13 +202,14 @@ li {
 
 .nav-title {
 	font-weight: 400;
+	font-size: calc(var(--base-size) * 0.8);
 	color: white;
 }
 
 .navbar a {
 	border: 1px solid white;
 	color: white;
-	padding: 5px 20px;
+	padding: 5px 10px;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -216,6 +217,19 @@ li {
 .navbar a:hover {
 	background-color: white;
 	color: var(--color--primary-red);
+}
+
+#playPauseButton {
+	padding: 5px 10px;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: calc(var(--base-size) * 1);
+	font-family: var(--font-body);
+
+	width: 120px;
+	text-align: center;
 }
 
 label {
@@ -407,6 +421,10 @@ dialog audio {
 
 .audio-block dialog div {
 	width: 100%;
+}
+
+.audio-block img, .linked-audio-block img {
+	border: 1px solid rgba(128, 128, 128, 0.302);
 }
 
 .link-block dialog .block-title-style {
