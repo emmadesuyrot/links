@@ -582,7 +582,7 @@ h1 {
 #main-content {
 	min-block-size: 75vh;
 	padding-top: var(--base-size);
-	padding-bottom: var(2 * (--base-size));
+	/* padding-bottom: var(2 * (--base-size)); */
 }
 
 .navbar {

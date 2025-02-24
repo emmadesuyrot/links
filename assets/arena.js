@@ -106,7 +106,7 @@ let renderBlock = (block) => {
 
 			let videoItem =
 				`
-				<li class="video-block ">
+				<li class="video-block">
 				<button class="polaroid rotate">
 					<video autoplay muted>
 					<source src="${ block.source.url }" type="video/mp4">
@@ -293,6 +293,3 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 		initInteraction()
 	})
-
-
-
