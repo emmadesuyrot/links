@@ -231,6 +231,7 @@ let renderBlock = (block) => {
 						<div>
 							<p class="block-title-style">${ block.generated_title }</p>
 							<img src="${ block.image.thumb.url }"></img>
+							<a href="${ block.source.url }">Listen to audio</a>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
