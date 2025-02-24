@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	buttons.forEach(button => {
 		// forEach (loops over each button)
-		button.innerHTML = "⏵︎";
+		button.innerHTML = "⏸︎";
 	
 		button.addEventListener("click", () => {
 		// If the audio is playing, pause it, else play it
