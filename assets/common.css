@@ -1,0 +1,14 @@
+body {
+	--base-size: 16px;
+	--gutter-size: calc(var(--base-size));
+
+	--color--primary: black;
+	--color--secondary: gold;
+	/* --color--background: #9b1717; */
+	--color--primary-red: #4a0000;
+	--color--re-shadow: #9d0c0c;
+
+	--font-body: 'Nunito Sans', sans-serif;
+	--font-heading: 'Reenie Beanie', cursive, sans-serif;
+	--handwritten-font: 'Reenie Beanie', cursive, sans-serif;
+}

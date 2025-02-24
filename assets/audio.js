@@ -7,6 +7,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 	const audio = new Audio("assets/audio/GibranAlcocer-Idea10.mp3");
 		audio.loop = true;
+		audio.autoplay = true;
+
 	const buttons = document.querySelectorAll("button");
 
 	buttons.forEach(button => {
@@ -24,4 +26,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		});
 	});
-	});
+});

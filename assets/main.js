@@ -55,7 +55,7 @@
 // 	channelBlocks.classList.remove('show-link')
 // }
 
-// html element: event chnage. source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event 
+// html element: event change. source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event 
 // I wanted to use a filter instead of having multiple buttons to sort my blocks!
 // the script matches the html <label>
 
