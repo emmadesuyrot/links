@@ -202,14 +202,14 @@ li {
 
 .nav-title {
 	font-weight: 400;
-	font-size: calc(var(--base-size) * 0.8);
+	font-size: calc(var(--base-size) * 1);
 	color: white;
 }
 
 .navbar a {
 	border: 1px solid white;
 	color: white;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -220,7 +220,7 @@ li {
 }
 
 #playPauseButton {
-	padding: 5px 10px;
+	padding: 5px 15px;
 	border: 1px solid white;
 	color: white;
 	border-radius: 5px;
@@ -228,7 +228,7 @@ li {
 	font-size: calc(var(--base-size) * 1);
 	font-family: var(--font-body);
 
-	width: 120px;
+	min-width: 30px;
 	text-align: center;
 }
 
@@ -249,16 +249,15 @@ label {
 
 .snapshot {
 	width: 100%;
-	max-width: 150px;
+	max-width: 130px;
 	margin: 5px;
 	border-radius: 4px;
 	display: inline-block;
 	border: 1.5px solid var(--color--re-shadow);
-	/* color: var(--color--re-shadow); */
-	padding: 10px 15px;
+	padding: 5px 20px;
 	font-weight: 500;
 	cursor: pointer;
-	font-size: var(--base-size);
+	font-size: calc(var(--base-size)*0.9);
 	font-family: var(--font-body);
 }
 
@@ -551,7 +550,11 @@ body:has(dialog[open]) {
 header {
 	background-color: var(--color--background);
 	padding-block-start: calc(5 * var(--base-size));
-	padding-block-end: calc(3 * var(--base-size));
+	padding-block-end: calc(2 * var(--base-size));
+}
+
+h1 {
+	font-size: calc(var(--base-size) * 2.8);
 }
 
 #channel-description {
@@ -582,6 +585,10 @@ header {
 	padding-bottom: var(2 * (--base-size));
 }
 
+.navbar {
+	padding: 0 50px;
+}
+
 footer {
 	padding-top: var(--base-size);
 	padding-bottom: calc(3 * var(--base-size));
@@ -598,11 +605,11 @@ footer {
 	}
 
 h1 {
-	font-size: calc(var(--base-size) * 4);
+	font-size: calc(var(--base-size) * 3.8);
 }
 
 p {
-	font-size: calc(var(--base-size) * 1.25);
+	font-size: calc(var(--base-size) * 1);
 	line-height: 1.6;
 	padding: 0 30px;
 }
