@@ -728,6 +728,7 @@ header.gutters {
 .text-block dialog .block-title-style {
 	font-size: calc(var(--base-size) * 2);
 	padding-left: 15px;
+	text-align: center;
 }
 
 .text-block dialog .Close {
@@ -736,7 +737,6 @@ header.gutters {
 	font-size: calc(var(--base-size) * 1.3);
 }
 
-/* edit here */
 .image-block dialog div, .link-block dialog div, .text-block dialog div, .linked-audio-block dialog div {
 	text-align: center;
 	margin-bottom: 10px;
@@ -746,79 +746,56 @@ header.gutters {
 	font-size: calc(var(--base-size) * 1);
 	line-height: 1.5;
 	padding-bottom: 10px;
+	text-align: center;
 }
 
 /* title in block */
-
 .image-block dialog[open], .video-block dialog[open], .audio-block dialog[open], .linked-audio-block dialog[open] {
 	padding: 20px;
 	width: 450px;
 	position: fixed;
 }
 
-/* left off here .link-block */
 .link-block dialog[open] {
 	padding: 20px;
 	width: 600px;
-	position: fixed;
 }
 
 .image-block dialog .block-title-style {
 	font-size: calc(var(--base-size) * 2);
+	text-align: center;
 	line-height: 1;
 	padding-bottom: 5px;
 	padding-top: 20px;
 }
 
 .linked-audio-block dialog .block-title-style {
-	font-size: calc(var(--base-size) * 1.8);
+	font-size: calc(var(--base-size) * 2);
+	text-align: center;
 	line-height: 1;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding: 30px 0;
 }
 
 .audio-block dialog .block-title-style {
-	font-family: var(--handwritten-font);
-	font-size: calc(var(--base-size) * 1.5);
+	font-size: calc(var(--base-size) * 2);
+	text-align: center;
 	line-height: 1;
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
 
-dialog audio {
-	width: 100%;
-	height: revert;
-}
-
-.audio-block dialog div {
-	width: 100%;
-}
-
-.audio-block img, .linked-audio-block img {
-	border: 1px solid rgba(128, 128, 128, 0.302);
-}
-
 .link-block dialog .block-title-style {
-	font-family: var(--handwritten-font);
-	font-size: calc(var(--base-size) * 1.8);
-	line-height: 1;
-	padding-bottom: 5px;
-	padding-top: 20px;
-}
-
-.link-block dialog .block-title-style {
-	font-family: var(--handwritten-font);
-	font-size: calc(var(--base-size) * 1.8);
+	font-size: calc(var(--base-size) * 2);
 	line-height: 1;
 	padding-bottom: 5px;
 	padding-top: 20px;
 }
 
 .video-block dialog .block-title-style {
-	font-family: var(--handwritten-font);
-	font-size: calc(var(--base-size) * 1.6);
-	line-height: 1;
-	padding-bottom: 20px;
+	font-size: calc(var(--base-size) * 1.9);
+	line-height: 1.2;
+	text-align: center;
+	padding-bottom: 30px;
 	padding-top: 26px;
 }
 
@@ -828,43 +805,14 @@ a {
 	padding-top: 20px;
 }
 
-.image-block dialog img {
-	width: 350px;
-	height: 350px;
-}
-
-.linked-audio-block dialog img {
-	object-fit: cover;
-	display: block;
-	aspect-ratio: 1 / 1;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	margin-bottom: 20px;
-
-	background: white;
-	border: 8px solid white;
-	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
-	border-radius: 5px;
-	transform: rotate(3deg);
-}
-
 .video-block dialog iframe {
-	object-fit: cover;
-	display: block;
-	aspect-ratio: 1 / 1;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	margin-bottom: 20px;
+	width: 400px;
+	height: 250px;
+}
 
-	background: white;
-	border: 8px solid white;
-	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
-	border-radius: 5px;
-	transform: rotate(3deg);
+.image-block dialog img {
+	width: 250px;
+	height: 250px;
 }
 
 .linked-audio-block dialog {
@@ -882,25 +830,8 @@ a {
 	left: 50%;
 }
 
-.link-block dialog, .text-block dialog {
-	width: 250px;
-	height: auto;
-	object-fit: cover;
-	border-radius: 5px;
-}
-
-.link-block dialog blockquote {
-	width: 500px;
-	height: auto;
-	object-fit: cover;
-	border-radius: 5px;
-}
-
 .image-block dialog .Close, .link-block dialog .Close, .video-block dialog .Close, .audio-block dialog .Close, .linked-audio-block dialog .Close {
 	font-size: calc(var(--base-size) * 2);
 }
-
-
-
 
 }

@@ -39,7 +39,7 @@ let renderBlock = (block) => {
 						<div>
 							<p class="block-title-style">${block.title}</p>
 							<p>${block.description_html}</p>
-							<a href="${block.image.original.url}">See original ↗</a>
+							<a href="${block.image.original.url}">See original</a>
 						</div>
 						<button class="Close">×</button>
 				</dialog>
@@ -250,7 +250,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 		<address>
 			<img src="${ user.avatar_image.display }"></img>
 			<h3>${ user.first_name }</h3>
-			<p><a href="https://are.na/${ user.slug }">Are.na profile ↗</a></p>
+			<p><a href="https://are.na/${ user.slug }">Are.na profile</a></p>
 		</address>
 		`
 	container.insertAdjacentHTML('beforeend', userAddress)
