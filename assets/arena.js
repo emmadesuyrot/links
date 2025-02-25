@@ -282,7 +282,7 @@ let initInteraction = () => {
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
 	.then((response) => response.json()) // Return it as JSON data
 	.then((data) => { // Do stuff with the data
-		console.log(data) // Always good to check your response!
+		// console.log(data) // Always good to check your response!
 		placeChannelInfo(data)
 
 		// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
