@@ -181,7 +181,6 @@ let renderBlock = (block) => {
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem);
-			console.log("Success!");
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
 	}

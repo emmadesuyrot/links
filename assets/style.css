@@ -572,10 +572,6 @@ h1 {
 	font-size: calc(var(--base-size) * 2.8);
 }
 
-.navbar {
-	padding: 0 60px;
-}
-
 #channel-description {
 	max-width: 50ch;
 	margin: 0 auto;
@@ -618,6 +614,10 @@ footer {
 		--gutter-size: calc(4 * var(--base-size));
 		--base-size: 22px;
 	}
+
+.navbar {
+	padding: 0 60px;
+}
 
 h1 {
 	font-size: calc(var(--base-size) * 3.8);
@@ -666,7 +666,6 @@ p {
 	font-size: calc(var(--base-size) * 0.9);
 	line-height: 1.6;
 	padding-left: 40px;
-	text-align: left;
 	/* padding-top: 20px; */
 	max-width: 60ch;
 }
@@ -692,15 +691,23 @@ p {
 }
 
 .grid-bottom {
-	grid-column: span 2;
-	text-align: center;
+	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	position: relative;
+
+	margin: 0 auto;
+	max-width: 30ch;
+	font-size: calc(var(--base-size) * 1.4);
 }
 
 header.gutters {
 	padding: 20px;
+}
+
+header.gutters p {
+	text-align: left;
 }
 
 .navbar {
@@ -723,6 +730,7 @@ header.gutters {
 .text-block dialog p {
 	font-size: calc(var(--base-size) * 0.85);
 	line-height: 1.4;
+	text-align: left;
 }
 
 .text-block dialog .block-title-style {
