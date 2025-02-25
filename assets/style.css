@@ -54,7 +54,6 @@ p {
 	font-family: var(--font-body);
 	font-size: calc(var(--base-size) * 0.875);
 	line-height: 1.6;
-	/* padding-top: 20px; */
 }
 
 .polaroid {
@@ -168,7 +167,6 @@ li {
 	flex: 0 0 auto;
 	width: 250px;
 	height: 250px;
-	/* overflow: hidden; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -212,6 +210,11 @@ li {
 	padding: 5px 15px;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.navbar a:hover, #PlayPauseButton:hover {
+	background-color: #fff;
+	color: var(--color--primary-red);
 }
 
 #playPauseButton {
@@ -273,7 +276,7 @@ footer {
 	margin-top: 20px;
 }
 
-/* filter buttons */
+filter buttons
 .show-video li, .show-image li, .show-text li, .show-audio li, .show-pdf li, .show-linked-audio li, .show-link li {
 	display: none;
 }
@@ -291,7 +294,6 @@ button {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* background: white; */
 	background-image: url('images/paper-texture.jpg');
 	border-radius: 5px;
 	border: 1px solid #d0d0d0; 
@@ -349,7 +351,7 @@ button {
 	padding: 30px 20px 20px;
 	max-height: 50vh;
 	width: 100%;
-	overflow-y: auto;
+	overflow-y: scroll;
 	margin-bottom: 2px;
 	box-sizing: border-box;
 }
@@ -549,7 +551,7 @@ a {
 	backdrop-filter: blur(8px);
 }
 
-/* Keep your body styling when the dialog is open */
+/* Keep body styling when the dialog is open */
 body:has(dialog[open]) {
 	background-color: #4a0000;
 	overflow: hidden;
@@ -666,7 +668,6 @@ p {
 	font-size: calc(var(--base-size) * 0.9);
 	line-height: 1.6;
 	padding-left: 40px;
-	/* padding-top: 20px; */
 	max-width: 60ch;
 }
 

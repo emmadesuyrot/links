@@ -1,5 +1,9 @@
 body {
-	background-image: url('images/paper-texture.jpg');
+	background-image: url('images/bg-image-polaroids.png');
+	background-size: cover;
+	background-position: center;
+
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,7 +20,8 @@ body {
 	width: 250px;
 	height: auto;
 	padding: 10px;
-	background: rgb(255, 255, 255);
+
+	background: var(--color--re-shadow);
 	border-radius: 5px;
 	box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.2);
 	position: relative;
@@ -24,12 +29,13 @@ body {
 }
 
 .polaroid-picture {
-	background-color: var(--color--re-shadow);
+	background-color: white;
 	border: 2px solid #ddd;
 	padding: 10px;
 	margin: 5px 0;
 	border-radius: 5px;
 	height: 200px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -40,30 +46,60 @@ body {
 .polaroid header {
 	font-size: calc(var(--base-size) * 1.1);
 	font-family: var(--font-body);
-	color: white;
+	color: var(--color--re-shadow);
+	font-weight: 600;
 }
 
 .polaroid p {
 	font-size: calc(var(--base-size) * 0.9);
 	font-family: var(--font-body);
-	color: rgb(255, 148, 148);
+	color: var(--color--re-shadow);
 	line-height: 1.4;
 	margin-top: 10px;
 	width: 200px;
 }
 
 button {
-	margin: 6px;
+	margin-top: 4px;
 	padding: 10px 24px;
 	font-size: calc(var(--base-size) * 1.5);
 	font-family: var(--font-heading);
-	border: 1.5px solid var(--color--re-shadow);
-	color: var(--color--re-shadow);
+	border: 1.5px solid white;
+	color: white;
 	border-radius: 25px;
 	cursor: pointer;
 }
 
 .polaroid button:hover {
-	background: var(--color--re-shadow);
-	color: white;
+	background: white;
+	color: var(--color--re-shadow);
+}
+
+@media screen and (min-width: 1280px) {
+.polaroid {
+	width: 340px;
+	padding: 12px;
+}
+
+.polaroid-picture {
+	height: 300px;
+	width: 300px;
+	padding: 15px;
+}
+
+.polaroid header {
+	font-size: calc(var(--base-size) * 1.6);
+}
+
+.polaroid p {
+	font-size: calc(var(--base-size) * 1.2);
+	width: 250px;
+}
+
+button {
+	font-size: calc(var(--base-size) * 1.8);
+	padding: 12px 30px;
+	margin-top: 10px;
+}
+
 }
