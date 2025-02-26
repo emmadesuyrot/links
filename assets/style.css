@@ -98,6 +98,7 @@ p {
 	transform: rotate(0deg) scale(1.05);
 	background: var(--color--re-shadow);
 	color: white;
+	z-index: 2;
 }
 
 .polaroid iframe, 
