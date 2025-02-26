@@ -125,13 +125,6 @@ let renderBlock = (block) => {
 				</dialog>
 				</li>
 				`
-
-				// if (!block.title) {
-				// 	videoItem = `
-				// 	<p>No title</p>
-				// 	`
-				// }
-		
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
@@ -195,6 +188,8 @@ let renderBlock = (block) => {
 		// Linked video!
 		if (embed.includes('video')) {
 			// …still up to you, but here’s an example `iframe` element:
+			console.log("Video URL: ", block.source.url); 
+			
 			let linkedVideoItem =
 				`
 				<li class="video-block">

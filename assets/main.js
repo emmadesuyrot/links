@@ -64,6 +64,7 @@ let selectElement = document.querySelector('.snapshot');
 
 selectElement.addEventListener('change', (event) => {
 	let selectedValue = event.target.value;
+
 	channelBlocks.classList.remove('show-video', 'show-image', 'show-text', 'show-audio', 'show-linked-audio', 'show-link');
 
 	if (selectedValue === 'show-video-button')
@@ -78,7 +79,7 @@ selectElement.addEventListener('change', (event) => {
 	else if (selectedValue === 'show-audio-button')
 
 	// gathered all audio blocks
-	{channelBlocks.classList.add('show-audio', 'show-linked-audio');
+	{channelBlocks.classList.add('show-audio', 'show-linked-audio', 'show-video');
 }
 
 });
